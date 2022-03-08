@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+#header{
+  display: none;
+}
+
+*{
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Open Sans Condensed';
+    font-weight: 600;
+}
+
+h3{
+  font-weight: 900;
+}
+
+p{
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-family: 'Open Sans Condensed';
+    font-weight: 600;
+
+    text-align: justify;
+    color: white !important;;
+}
+
+/*Top LEFT BOTTOM-RIGHT*/
+
+img#logo-top{
+  position: absolute;
+    width: 200px;
+
+    top: -6em;
+    left: 0;
+
+    margin: 5em;
+
+}
+
+img#team-logo{
+    width: 16rem;
+    height: 16rem;
+    position: relative;
+    left: 75rem;
+    top: 66rem;
+}
+
+
+table.gt_table {
+    position: absolute;
+    top: -12em;
+    left: 5em;
+}
+
+td.gt_row.gt_center {
+    color: white !important;
+}
+
+#twidrqsaej .gt_col_headings{
+    color: #FFFFFF !important;
+    background-color: #333333 !important;
+
+}
+
+
+body {
+
+    border: 5px solid white;
+
+   font-size: 1rem;
+    line-height: 1.42857143;
+    width: 1050px;
+
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.container-fluid{
+  padding: 0px;
+}
+
+.container-fluid.main-container {
+    background: white !important;
+
+    max-width: 100%;
+
+
+}
+
+div#principal-capa:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100% !important;
+    background: white !important;
+}
+
+div#principal-capa {
+    padding: 0px;
+    margin: 0px;
+    height: 1375px;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid black;
+    background: black !important;
+}
+
+div#title h2 {
+    font-size: 5.25rem;
+    color: white !important;
+    font-weight: 900;
+
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    top: 35rem;
+    left: 0rem;
+}
+
+div#player-report-name h3 {
+    font-size: 14.5rem;
+    text-align: center;
+    font-weight: 900;
+    color: #EDAE2F !important;
+    position: relative;
+    top: 60rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*************************PRINCIPAL: PAGINA 1 ************************************/
+
+div#principal-capa h1,
+div#principal h1{
+  display: none;
+}
+
+
+
+#principal{
+  padding:0px;
+  margin:25px 0 0 0 ;
+  height: 1370px;
+
+  overflow: hidden;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left-column right-column"
+                        "table table";
+  gap: 3em;
+
+  border: 5px solid black;
+  background: black  !important;
+}
+
+div#left-column:before {
+    content: "";
+    width: 48rem;
+    height: 15rem;
+    position: absolute;
+    background: black !important;
+    top: 15em;
+    left: 0em;
+}
+
+
+div#left-column {
+    grid-area: left-column;
+
+    padding: 2em;
+
+}
+
+div#left-column h2 {
+    position: relative;
+    top: 3.75em;
+    margin-bottom: 5em;
+    color: white !important;
+    border: 10px double;
+
+}
+
+div#right-column:before {
+    content: "";
+    width: 49rem;
+    height: 15rem;
+    position: absolute;
+    background: black !important;
+    top: 0em;
+    right: 0em;
+}
+
+
+div#right-column {
+    grid-area: right-column;
+
+    padding: 2em;
+
+}
+
+div#right-column h2 {
+    position: relative;
+    margin-bottom: 0.5em;
+    color: white !important;
+    border: 10px double;
+
+}
+
+div#right-column h3 {
+    display: none;
+}
+
+div#right-column p span {
+    color: white !important;
+}
+
+
+div#table-section{
+    grid-area: table;
+    position: relative;
+
+}
+
+
+
+/*************************PAGINA 1******************/
+#list-1,#list-2,#list-3,#list-4{
+
+}
+
+/*************************PAGINA 2******************/
+#principal.pagina-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "left-column right-column"
+        "img-pg-2 img-pg-2";
+
+
+}
+
+#principal.pagina-2 h2{
+
+}
+
+
+#principal.pagina-2 #left-column:before {
+    content: "";
+    width: 48rem;
+    height: 21rem;
+    position: absolute;
+    /* background: red !important; */
+    top: 15em;
+    left: 0em;
+}
+
+
+#principal.pagina-2 #left-column h2 {
+    position: relative;
+    top: 3.25em;
+    margin-bottom: 17rem;
+    color: white !important;
+}
+
+#principal.pagina-2 #left-column {
+    grid-area: left-column;
+    padding: 2em;
+
+}
+
+
+#principal.pagina-2 #right-column {
+    grid-area: right-column;
+    padding: 2em;
+
+}
+
+#principal.pagina-2 #right-column h2 {
+    position: relative;
+    margin-bottom: 1.05em;
+    color: white !important;
+
+
+}
+
+
+
+div#graficos-pg-2 {
+    grid-area: img-pg-2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "titulo titulo"
+        "img-1 text-1"
+        "text-2 text-2";
+    align-items: center;
+    position: absolute;
+    top: -33rem;
+    align-items: center;
+    padding: 2em;
+}
+
+#graficos-pg-2 h2 {
+    grid-area: titulo;
+    border: 5px double white !important;
+    color: white !important;
+    width: fit-content;
+     margin-left: 3em;
+     margin-top: 1em;
+}
+
+div#graficos-pg-2 #img-1{
+
+}
+
+div#graficos-pg-2 #img-2{
+    position: absolute;
+    width: 1100px;
+    top: 16rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+span#pg-2-p1 {
+
+    color: white !important;
+}
+
+span#pg-2-p2 {
+
+    color: white !important;
+}
+
+/**************************PAGINA 3***************************************/
+
+#principal.pagina-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "left-column right-column"
+        "campinhos-top campinhos-top";
+
+
+}
+
+
+#principal.pagina-3 #left-column:before {
+    content: "";
+    width: 48rem;
+    height: 0rem;
+    position: absolute;
+    top: 15em;
+    left: 0em;
+}
+
+
+#principal.pagina-3 #left-column h2 {
+    position: relative;
+    top: 3.25em;
+    margin-bottom: 4em;
+    color: white !important;
+}
+
+#principal.pagina-3 #left-column {
+    grid-area: left-column;
+    padding: 2em;
+
+}
+
+div#campinhos-bottom h2 {
+    display: none;
+}
+
+#campinhos-bottom{
+    grid-area: campinhos-top;
+    display: flex;
+}
+
+
+
+img#campinho-3 {
+    height: 47rem;
+
+}
+
+span#campinho-p {
+    width: 29rem;
+    display: inline-block;
+    margin: 0 2em;
+    color: white !important;
+}
+
+img#campinho-4 {
+    width: 40rem;
+}
+
+span#campinho-p-2 {
+    display: inline-block;
+    position: relative;
+    top: 32rem;
+    right: 1rem;
+    color: white !important;
+}
+
+
+/**************************PAGINA 3***************************************/
+
+
+
+#principal.pagina-4 #left-column h2 {
+    position: relative;
+    top: 3.25em;
+    margin-bottom: 4em;
+    color: white !important;
+}
+
+
+
+#principal.pagina-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+/**************************PAGINA 3***************************************/
+#principal.pagina-5 #left-column h2 {
+    position: relative;
+    top: 3.25em;
+    margin-bottom: 4em;
+    color: white !important;
+}
+
+#principal.pagina-5 h3{
+  color:white !important;
+  color: white !important;
+    border-bottom: 5px double white!important;
+    margin: 2em;
+    width: fit-content;
+}
+
+
+
+#principal.pagina-5 {
+    display: flex;
+    flex-direction: column;
+}
+
+img#logo-top-pg-6 {
+    position: absolute;
+    bottom: 20rem;
+    left: 35rem;
+}

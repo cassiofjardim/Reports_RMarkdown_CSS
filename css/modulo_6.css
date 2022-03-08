@@ -1,0 +1,402 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+#header{
+  display: none;
+}
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+h1{
+  font-size: 6rem;
+  color: blue;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-size: 1.25em;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+h2 + p {
+    padding: 1.25em;
+    font-size: 1.5em;
+}
+
+span{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/********************** COVER **********************/
+body {
+
+    border: 5px solid white;
+
+   font-size: 1rem;
+    line-height: 1.42857143;
+    width: 1050px;
+
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.container-fluid{
+  padding: 0px;
+}
+
+.container-fluid.main-container {
+
+
+    max-width: 100%;
+}
+
+div#principal-cover {
+    padding: 0px;
+    margin: 0px;
+    height: 1375px;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: -webkit-linear-gradient(217deg, #dee5eb 65%, #f1f1f1 50%) !important;
+    text-align: center;
+    border: 5px double !important;
+
+
+
+}
+
+div#principal-cover h1{
+  font-size: 9rem;
+  font-weight: 900;
+   font-family: 'Roboto', sans-serif;;
+ color: #004effab !important;
+}
+
+div#title h2{
+  font-size: 10rem;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;;
+  color: #8a8eaf !important;
+}
+
+div#footer h2{
+display:none;
+}
+
+#footer ul li {
+    font-size: 1.55rem;
+    font-weight: 900;
+}
+
+#footer ul {
+    list-style: none;
+}
+
+/*#footer ul {
+    gap: 10em;
+    margin-left: 2em;
+    width: fit-content;
+    padding: 1em;
+    font-size: 2rem;
+    font-weight: 900;
+    list-style: none;
+    position: relative;
+
+    text-align: left;
+}
+
+#footer ul li{
+  position: relative;
+    left: 33rem;
+} */
+/*************************PRINCIPAL: PAGINA 1/2/3/4/5 ************************************/
+
+div#principal {
+    margin: 25px 0 0 0;
+    height: 1370px;
+    overflow: hidden;
+    position: relative;
+    background-image: -webkit-linear-gradient(217deg, #dee5eb 65%, #f1f1f1 50%) !important;
+    border: 5px double !important;
+
+}
+
+div#principal h1 {
+    color: red !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+
+div#principal.page-1 h1,
+div#principal.page-2 h1,
+div#principal.page-3 h1,
+div#principal.page-4 h1,
+div#principal.page-5 h1 {
+  display: none;
+}
+
+/*********************** PAGINA 1*********************************************/
+
+div#principal #provedor-pago {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "title title title";
+    gap: 3em;
+}
+
+div#provedor-pago h3 {
+    grid-area: title;
+    text-align: center;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+div#principal #provedor-livre{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "title title title"
+        "fbref transfermarket understat"
+        "worldfootballR resumo .";
+}
+
+div#provedor-livre h3{
+    grid-area: title;
+    text-align: center;
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+
+
+div#principal img#opta,
+div#principal img#statsbomb,
+div#principal img#wyscout,
+div#principal img#fbref,
+div#principal img#transfermarket,
+div#principal img#understat{
+  width: 250px;
+  height: 100px;
+  margin-left: 2em;
+
+
+}
+
+
+img#logo-R-package {
+    width: 200px !important;
+    height: 200px !important;
+    margin-left: 4em;
+}
+
+div#principal #p-below-img{
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-left: 2em;
+    width: 250px;
+
+}
+
+h6 {
+    font-size: 4rem;
+    position: relative;
+    left: 30rem;
+    font-weight: 900;
+    top: 1.5em;
+}
+
+#provedor-livre #resumo {
+    grid-area: resumo;
+    position: absolute;
+    width: 400px;
+    right: 5rem;
+    bottom: 20rem;
+    padding-bottom: 1em;
+    border-bottom: 10px double;
+}
+
+/*********************** PAGINA 2*********************************************/
+
+span#list-4{
+    grid-area: list-4 !important;
+}
+span#list-3{
+    grid-area: list-3 !important;
+}
+span#list-2{
+    grid-area: list-2 !important;
+}
+span#list-1{
+    grid-area: list-1 !important;
+}
+#ex-2 ul {
+    width: auto !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "list-1 ."
+        ". list-2"
+        "list-3 ."
+        ". list-4";
+}
+
+#ex-2 ul li {
+    margin: 3em 0 !important;
+}
+
+
+
+/*********************** PAGINA 3*********************************************/
+
+div#comentários-1 p:nth-child(3) {
+    /* color: red; */
+    font-size: 1.5rem;
+    margin: 0em 2.25em;
+}
+
+
+span#list-transfer-p {
+    text-align: left;
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+#pros{
+  color: blue !important;
+  font-weight: bold !important;
+  text-align: left;
+}
+
+#contra{
+  color: red !important;
+  font-weight: bold !important;
+}
+
+.ind-table{
+  display: flex;
+  width: fit-content;
+  margin: 1.75em 1em 1.25em 1em;
+
+}
+
+
+
+div#individual {
+    width: 210px;
+    margin: 0px;
+    padding: 0px !important;
+    overflow: unset !important;
+    margin-left: 1em !important;
+}
+
+ul{
+  gap: 8em  !important;;
+  margin-left: 2em;
+  width: 250px;
+  padding: 1em;
+}
+
+ul p {
+    font-weight: 300;
+}
+
+div#conclusão-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "title title title"
+        "p p p"
+        "mbappe broja salcedo";
+}
+
+div#conclusão-1 ul {
+    display: flex  !important;;
+    margin: 0px auto !important;
+}
+
+span#transfer-p {
+    padding: 2.5em;
+    font-size: 1.15em;
+    font-weight: 900;
+}
+span#transfer-p strong{
+  margin-left: 0.25em;
+}
+
+div#conclusão-1 h2 {
+    grid-area: title;
+}
+
+div#conclusão-1 p {
+    grid-area: p;
+}
+
+div#conclusão-1 ul {
+    display: flex;
+}
+
+div#conclusão-1 ul li p {
+  display: inline-block;
+    width: 250px;
+    font-weight: 700;
+}
+
+#mbappe-transfermarket,
+#borja-transfermarket,
+#salcedo-transfermarket{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+
+/*********************** PAGINA 4*********************************************/
+
+
+div#individual-table-3 {
+    margin-top: 5em;
+}
+
+

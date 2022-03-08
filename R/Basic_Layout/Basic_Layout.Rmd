@@ -16,7 +16,7 @@ p_load(tidyverse,shiny,shinydashboard,shinyWidgets,gt,gtExtras,plotly,vembedr,sh
 
 # Cover{#principal-cover}
 
-## Primeiro{#title}
+## Primeiro.{#title}
 
 ::: {#dot-div}
 

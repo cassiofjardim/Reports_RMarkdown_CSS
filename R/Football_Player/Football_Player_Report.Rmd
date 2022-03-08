@@ -1,0 +1,274 @@
+---
+title: "Report_2"
+author: "Teste1"
+date: "02/02/2022"
+output: html_document
+css: "../../css/football_player_style.css"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
+
+library(tidyverse)
+library(worldfootballR)
+library(png)
+library(grid)
+library(janitor)
+library(gt)
+library(gtExtras)
+```
+
+# capa{#principal-capa}
+
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+
+
+
+## PLAYER REPORT:{#title}
+
+### Lionel Messi{#player-report-name}
+
+![](../../img/football_player_report/logo_google_psg.png){#team-logo}
+ 
+
+# pagina-1{#principal}
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+ 
+
+
+## Resumo do Documento:{#left-column}
+
+Neste Rlatório iremos ...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus.
+
+
+
+## Lionel Messi em Números:<br>Raio-X da Carreira<br>Temporada 20/21 {#right-column}
+
+ 
+
+### paragraph-2
+
+### Por que a Temporada 2022 é tão importante?{#pergunta-1}
+
+<span id = 'atencao'>A ideia principal desse report é aprofundar a análise apreentada na nos slides. Aqui o elemento textual será mais presente, tendo em vista que buscamos a atenção dos Empresários/Agentes dos Cliente.</span>
+
+  - <span id = 'list-1'>Para o caso especifico do Jogador Lionel Messi observamos nos dados um periodo de evolução que faz da temporada atual decisiva para o atleta. Nesse sentido, Inicia-se com uma analise geral da carreira do atleta </span>
+  
+  - <span id = 'list-2'>Na segunda pagina comentários sobre as estatisticas individuais do atleta.  </span>  
+  
+  - <span id = 'list-3'>Na terceira página comentários sobre a questão do posicionamento e tática do atleta.  </span>
+  
+  - <span id = 'list-4'>Na quarta pagina é uma análise comparativa que visa "provocar" o atleta. Além disso, ao fimapresentamos as metas sugeridas ao atleta, juntamente com as métricas criadas pela equipe da Outlier (juntamente com a sua metodologia).  </span>
+  
+ Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque8. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequ}at ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est..
+
+## {#table-section}
+
+<!-- ![](../tabelaprintada.png){#img-tabela} -->
+```{r table, echo= F}
+
+table_1_df<-readRDS(file = "data/table_1_df.rds")
+
+table_1_df <- table_1_df %>% 
+                mutate(logo_team = c(rep("img/football_player_report/bragantino.png",3),
+                                   rep("img/football_player_report/cruzeiro.png",2),
+                                   rep("img/football_player_report/chapecoense.png",4),
+                                   "img/football_player_report/cruzeiro.png")) %>%
+
+  gt() %>%
+  gt_img_rows(logo_team, img_source = "local") %>%
+  gt_theme_dark()%>%
+  cols_align(
+    align = "center",
+    columns = everything()
+  )%>%
+  tab_header(title = "Lionel Messi: Uma Análise Geral da Carreira",
+             subtitle= "")%>%
+  tab_options(heading.title.font.size = 35,
+              heading.align = 'center',
+              data_row.padding = px(0),
+              table.border.bottom.color = "red",
+              table.border.top.color = "black",
+              
+              # heading.border.bottom.color = "red",
+              # heading.border.lr.color = "blue",
+              # heading.background.color = "black",
+              heading.border.bottom.style = "solid",
+              heading.border.bottom.color = "black",
+              heading.border.bottom.width = px(.5),
+              
+              
+              column_labels.border.top.color = "black",
+              column_labels.border.bottom.color = "black",
+              
+              table_body.hlines.color = 'black',
+
+              table.background.color = "black")%>%
+  tab_style(
+    style = cell_text(color = "white",
+                      size = px(14),
+                      weight = 900,
+                      align = 'center'),
+    locations = cells_body()) %>%
+
+  cols_label(
+    logo_team = "Adversários",
+    Season    = "Temporada",
+    Comp    = "Competição",
+    MP_Time = "Minutos Jogados",
+    Min_Time = "Minutagem",
+    Mins_Per_90_Time = "Min. Jogados/90"
+  )%>%
+  cols_width(
+    Season ~ px(100),
+    Age ~ px(40),
+    Squad ~ px(95),
+    logo_team ~ px(60),
+    Comp ~px(160),
+    Country ~ px(60),
+    MP_Time ~ px(110),
+    Starts_Time ~ px(80),
+    Min_Time ~ px(80),
+    Mins_Per_90_Time ~ px(80)
+
+  )%>%
+  gt_color_rows(MP_Time, palette =  c("white", "black"),
+                use_paletteer = FALSE)%>%
+
+  gt_color_rows(Mins_Per_90_Time,
+                palette =  c("white", "black"),
+                use_paletteer = FALSE)
+
+table_1_df
+
+
+ 
+```
+
+# pagina-2{#principal .pagina-2}
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+
+## Temporada 2022: A mais importante da carreira do atleta:{#left-column}
+
+Neste Rlatório iremos ...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus.
+
+## Comentarios: Desarmes {#right-column}
+
+
+
+### paragraph-2
+
+### Por que a Temporada 2022 é tão importante?{#pergunta-1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. 
+
+## Estatísticas em FOCO: Desarmes e Interceptações:{#graficos-pg-2}
+
+![](../../img/football_player_report/comparative_defending_1.svg){#img-2}
+
+
+
+# pagina-3{#principal .pagina-3}
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+
+
+## Ajustando o posicionamento:{#left-column}
+
+Neste Rlatório iremos ...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus.
+
+## Cobertura no Corredor Direito:{#right-column}
+
+ 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+## campinhos-bottom
+
+
+![](../../img/football_player_report/campinho_3.png){#campinho-3}
+
+
+<span id ="campinho-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus.  </span>
+
+
+![](../../img/football_player_report/campinho_4.png){#campinho-4}
+
+# pagina-4{#principal .pagina-4}
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+
+## Análise Comparativa: Lionel Messi x Top-5 do Campeonato Brasileiro{#left-column}
+
+Neste Rlatório iremos ...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus.
+
+![](../../img/football_player_report/comparative_passing_1.svg){#pg-5-img-1}
+
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+
+# pagina-5{#principal .pagina-5}
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+ 
+ 
+## (cont...) Análise Comparativa: Lionel Messi x Top-5 do Campeonato Brasileiro{#left-column}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. 
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+
+### Passing: A Estatistica que diferencia os melhores Zagueiros{#passing-pg-5}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. 
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+
+![](../../img/football_player_report/comparative_outros_2.svg){#pg-5-img-1}
+
+
+
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio.
+
+
+# pagina-6{#principal .pagina-6}
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top}
+
+## Conclusão:{#left-column}
+
+Neste Rlatório iremos ...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus.
+
+## Tópicos a serem discutidos na proxima reunião:{#right-column}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dui urna. Nunc commodo nulla faucibus metus fermentum, sed pulvinar sapien cursus. In tempor quam eget felis dignissim ultrices eu quis est. Pellentesque nec vulputate orci. Curabitur quis lacinia mi, sed aliquam ex. Aliquam non hendrerit nibh, id iaculis sem. Aenean lacinia tincidunt scelerisque. Sed eros erat, pulvinar in vestibulum sit amet, posuere sed ipsum. Cras scelerisque, leo maximus vestibulum iaculis, enim metus lacinia lorem, non consequat ipsum lorem sit amet risus. Maecenas eros odio, fringilla in diam non, tempus bibendum tortor. Sed semper metus metus, a faucibus metus congue sed. Pellentesque in interdum est.
+
+
+![](../../img/football_player_report/adidas_logo.png){#logo-top-pg-6}
+
+

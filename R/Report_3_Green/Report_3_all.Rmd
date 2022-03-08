@@ -1,0 +1,152 @@
+---
+title: "Report_2"
+author: "Cassio"
+date: "02/12/2021"
+output: html_document
+css: "../../css/cover_report_3.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(fontawesome)
+```
+
+# Cover{#principal-cover}
+
+## div{#inner-div}
+
+### Title{#title-cover}
+
+*In publishing and graphic design, Lorem ipsum is a placeholder text commonly .*
+
+### Footer{#footer}
+
+![](../../img/Report_3/bottom_right_cover.jpg){#bottom-cover-img}
+
+# Page-1{#principal .page-1}
+
+## div{#inner-div .inner-div-1}
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-1 .left}
+
+###
+::: {#dot-div-1}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-1 .right}
+
+###
+::: {#dot-div-2}
+
+In stating your mission, vision, and goals, it is best to be straightforward and concise. Your mission should clearly describe your purpose and what you wish to achieve for your company. Using keywords is highly crucial in this part as it can help summarize your objectives and highlight your approach. Outlining your vision should always be on a positive note. This part allows you to explain the concept you have in mind, and how the company can benefit from it. Lastly, in setting your goals, always include a timeline. This ties your mission and vision together and sums up what you want to accomplish.
+
+:::
+
+# Page-2{#principal .page-2}
+
+## div{#inner-div .inner-div-2}
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-2 .left}
+
+###
+::: {#dot-div-1}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-2 .right}
+
+###
+::: {#dot-div-2}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+
+# Page-3{#principal .page-3}
+
+## div{#inner-div .inner-div-3}
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-3 .left}
+
+###
+::: {#dot-div-1}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-3 .right}
+
+###
+::: {#dot-div-2}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+
+# Page-4{#principal .page-4}
+
+## div{#inner-div .inner-div-4}
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-4 .left}
+
+###
+::: {#dot-div-1}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-4 .right}
+
+###
+::: {#dot-div-2}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+
+
+
+# Page-5{#principal .page-5}
+
+## div{#inner-div .inner-div-5}
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-5 .left}
+
+###
+::: {#dot-div-1}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+ 
+
+### *In publishing and graphic design, Lorem ipsum is a placeholder text commonly*{#title-5 .right}
+
+###
+::: {#dot-div-2}
+
+A marketing report covers more than just a summary of your company’s projects and sales. It should include pertinent information such as the budgeting and cost, a breakdown of the supply and demand, the current state of your product or service in stores or online, and so forth. To efficiently combine the aforementioned information, you’ll need to create a suitable marketing report. This particular document should answer all questions that may possibly be raised during meetings which is why it is crucial to make it as detailed and organized as possible. Start by mapping out the contents and using distinct headlines to add structure.
+
+:::
+
+
+
+<!-- ![](../../img/Report_3/background_7_a.png){#header-img} -->
+<!-- ![](../../img/Report_3/background_7_a.png){#footer-img} -->
+
+
+
+

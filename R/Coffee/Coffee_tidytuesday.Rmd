@@ -1,0 +1,50 @@
+---
+title: "Coffee"
+author: "Cassio Felix"
+date: '2022-03-07'
+output: html_document
+css: "../../css/coffee.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Install from CRAN via: 
+library("tidytuesdayR")
+
+tuesdata <- tidytuesdayR::tt_load('2020-07-07')
+tuesdata <- tidytuesdayR::tt_load(2020, week = 28)
+
+coffee_ratings <- tuesdata$coffee_ratings
+
+# Or read in the data manually
+
+# coffee_ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-07/coffee_ratings.csv')
+
+
+```
+# Cover{#principal-cover}
+
+## Title{#title}
+
+::: {#dot-div}
+
+
+
+:::
+
+
+## Footer{#footer}
+
+
+# Page-1{#principal .page-1}
+
+
+
+
+# Page-2{#principal .page-2}
+
+
+# Page-3{#principal .page-3}
+
+
+# Page-4{#principal .page-4}

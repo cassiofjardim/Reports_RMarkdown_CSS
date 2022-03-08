@@ -26,6 +26,11 @@ coffee_ratings <- tuesdata$coffee_ratings
 
 ## Title{#title}
 
+```{r}
+mtcars
+```
+
+
 ::: {#dot-div}
 
 

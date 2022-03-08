@@ -30,6 +30,9 @@ p_load(tidyverse,shiny,shinydashboard,shinyWidgets,gt,gtExtras,plotly,vembedr,sh
 
 # Page-1{#principal .page-1}
 
+O proximo adversário será a equipe inglesa Manchester City. Como a semana de preparação foi curta optamos por fazer uma análise da última partida do adversário contra o Paris Saint-Germain F.C. Nessa partida Manchester City venceu por 2 a 1.
+Baseado em estudos anteriores sobre sobre os ingleses, percebemos que nessa partida alguns padrões de comportamento da se repetiram, e acreditamos que eles se comportem da mesma maneira. Esse detalhe importante reforça nossa escolha por analisar essa partida.
+
 
 
 
@@ -37,10 +40,10 @@ p_load(tidyverse,shiny,shinydashboard,shinyWidgets,gt,gtExtras,plotly,vembedr,sh
 
 
 # Page-3{#principal .page-3}
-
+O proximo adversário será a equipe inglesa Manchester City. Como a semana de preparação foi curta optamos por fazer uma análise da última partida do adversário contra o Paris Saint-Germain F.C. Nessa partida Manchester City venceu por 2 a 1.
 
 # Page-4{#principal .page-4}
-
+Baseado em estudos anteriores sobre sobre os ingleses, percebemos que nessa partida alguns padrões de comportamento da se repetiram, e acreditamos que eles se comportem da mesma maneira. Esse detalhe importante reforça nossa escolha por analisar essa partida.
  
 
 

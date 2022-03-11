@@ -1,5 +1,5 @@
 ---
-title: "Report_2"
+title: "Lione Messi Report"
 author: "Teste1"
 date: "02/02/2022"
 output: html_document
@@ -31,7 +31,7 @@ library(gtExtras)
 ![](../../img/football_player_report/logo_google_psg.png){#team-logo}
  
 
-# pagina-1{#principal}
+# pagina-1{#principal .pagina-1}
 
 ![](../../img/football_player_report/adidas_logo.png){#logo-top}
  

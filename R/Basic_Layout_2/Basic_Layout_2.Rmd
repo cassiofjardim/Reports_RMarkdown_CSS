@@ -1,5 +1,5 @@
 ---
-title: "Basic_Layout"
+title: "Basic_Layout_2"
 author: "Cassio Felix"
 date: '2022-02-18'
 output: html_document
@@ -29,16 +29,16 @@ p_load(tidyverse,shiny,shinydashboard,shinyWidgets,gt,gtExtras,plotly,vembedr,sh
 ## Footer{#footer}
 
 
-# Page-1{#principal .page-1}
+# {#principal .page-1}
 
 
-# Page-2{#principal .page-2}
+# {#principal .page-2}
 
 
-# Page-3{#principal .page-3}
+# {#principal .page-3}
 
 
-# Page-4{#principal .page-4}
+# {#principal .page-4}
 
  
 

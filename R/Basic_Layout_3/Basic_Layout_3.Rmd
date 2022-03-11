@@ -29,19 +29,23 @@ library()
 ## Footer{#footer}
 
 
+
 # Page-1{#principal .page-1}
 
+![](../../img/basic_layout_3/FOOTER_back_splash_1.jpg){.page-footer}
 
 # Page-2{#principal .page-2}
 
+![](../../img/basic_layout_3/FOOTER_back_splash_1.jpg){.page-footer}
 
 # Page-3{#principal .page-3}
 
+![](../../img/basic_layout_3/FOOTER_back_splash_1.jpg){.page-footer}
 
 # Page-4{#principal .page-4}
 
  
-
+![](../../img/basic_layout_3/FOOTER_back_splash_1.jpg){.page-footer}
 
 
 

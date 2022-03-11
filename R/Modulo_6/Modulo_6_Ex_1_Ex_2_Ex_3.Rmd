@@ -36,7 +36,7 @@ library(fontawesome)
 
 ## Escolhendo um Provedor de dados{#ex-1 .ex-1_title}
 
-VocÊ foi contratado para gerir o departamento de Analytics de um grande clube Portuguê. Foi lhe pedido para contratar um fornecedor de dados desportivos para comeC'ar o projeto. Qual seria a empresa que vocC* escolheria e Porque?
+VocÊ foi contratado para gerir o departamento de Analytics de um grande clube Portuguê. Foi lhe pedido para contratar um fornecedor de dados desportivos para comeC'ar o projeto. Qual seria a empresa que você escolheria e Porque?
 
 ### Provedores Pagos {#provedor-pago}
 
